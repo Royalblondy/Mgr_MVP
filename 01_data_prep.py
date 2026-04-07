@@ -1,57 +1,56 @@
 import pandas as pd
 
-# --- NAZWY PLIKÓW ---
+# --- KONFIGURACJA ---
+PLIK_LAND_USE = 'LandUse_Bulk.csv'
 PLIK_CROPS = 'Crops.csv'
-PLIK_LASY = 'ForestAll.csv'
-# --------------------------------
-
-print("Rozpoczynam przygotowanie danych...")
 
 
-def przetworz_szeroki_fao(nazwa_pliku):
-    print(f" Wczytywanie pliku: {nazwa_pliku}...")
-    # Czytamy pliki ze średnikami
-    df = pd.read_csv(nazwa_pliku, sep=';', encoding='utf-8', low_memory=False)
+# --------------------
 
-    # Bierzemy tylko Area, Item, Element i kolumny lat (Y1961 itd.)
-    kolumny_lat = [col for col in df.columns if col.startswith('Y') and not col.endswith(('F', 'N'))]
-    df_filtered = df[['Area', 'Item', 'Element'] + kolumny_lat].copy()
+def wczytaj_bulk_land(nazwa_pliku):
+    print(f"Przetwarzam wielki plik {nazwa_pliku}... to może chwilę potrwać.")
+    # Bulk download zazwyczaj używa przecinków, ale sprawdzimy to w locie
+    df = pd.read_csv(nazwa_pliku, encoding='latin1', low_memory=False)
 
-    # "Topimy" tabelę (format szeroki -> długi)
-    df_melted = df_filtered.melt(id_vars=['Area', 'Item', 'Element'], var_name='Year', value_name='Value')
+    # Interesują nas tylko hektary (Area)
+    df = df[df['Element'] == 'Area'].copy()
 
-    # Czyścimy z "Y" i konwertujemy na liczby
-    df_melted['Year'] = df_melted['Year'].str.replace('Y', '')
-    df_melted['Year'] = pd.to_numeric(df_melted['Year'], errors='coerce')
+    # Wybieramy lata (kolumny Y1961, Y1962...)
+    kolumny_lat = [col for col in df.columns if col.startswith('Y') and col[1:].isdigit()]
+    df_filtered = df[['Area', 'Item'] + kolumny_lat].copy()
+
+    # Topimy tabelę
+    df_melted = df_filtered.melt(id_vars=['Area', 'Item'], var_name='Year', value_name='Value')
+    df_melted['Year'] = df_melted['Year'].str.replace('Y', '').astype(int)
     df_melted['Value'] = pd.to_numeric(df_melted['Value'], errors='coerce')
 
-    # Wywalamy puste wiersze
-    return df_melted.dropna(subset=['Year', 'Value'])
+    return df_melted.dropna(subset=['Value'])
 
 
-# 1. Przetwarzamy pierwszy plik
-df_crops_livestock = przetworz_szeroki_fao(PLIK_CROPS)
+# 1. Pobieramy Lasy i Rolnictwo z nowego pliku
+df_land = wczytaj_bulk_land(PLIK_LAND_USE)
 
-#  - Wyciągamy Powierzchnię Rolniczą
-df_rolnictwo = df_crops_livestock[df_crops_livestock['Element'] == 'Area harvested'].groupby(['Area', 'Year'])[
-    'Value'].sum().reset_index()
-df_rolnictwo.rename(columns={'Value': 'Agri_Area'}, inplace=True)
+print("Wyodrębniam lasy i rolnictwo...")
+df_lasy = df_land[df_land['Item'] == 'Forest land'].copy()
+df_lasy = df_lasy.rename(columns={'Value': 'Forest_Area'})[['Area', 'Year', 'Forest_Area']]
 
-#  - Wyciągamy Bydło
-df_bydlo = df_crops_livestock[df_crops_livestock['Item'].str.contains('Cattle', case=False, na=False)].groupby(['Area', 'Year'])[
-    'Value'].sum().reset_index()
-df_bydlo.rename(columns={'Value': 'Cattle_Head'}, inplace=True)
+df_rolnictwo = df_land[df_land['Item'] == 'Agricultural land'].copy()
+df_rolnictwo = df_rolnictwo.rename(columns={'Value': 'Agri_Area'})[['Area', 'Year', 'Agri_Area']]
 
-# 2. Przetwarzamy drugi plik
-df_lasy_raw = przetworz_szeroki_fao(PLIK_LASY)
-df_lasy = df_lasy_raw.groupby(['Area', 'Year'])['Value'].sum().reset_index()
-df_lasy.rename(columns={'Value': 'Forest_Area'}, inplace=True)
+# 2. Pobieramy Bydło ze starego pliku (pamiętamy o średnikach)
+print("Doczytuję bydło z pliku Crops...")
+df_c = pd.read_csv(PLIK_CROPS, sep=';', encoding='utf-8', low_memory=False)
+kol_lat_c = [col for col in df_c.columns if col.startswith('Y') and not col.endswith(('F', 'N'))]
+df_c_filt = df_c[df_c['Item'].str.contains('Cattle', case=False, na=False)][['Area'] + kol_lat_c]
+df_bydlo = df_c_filt.melt(id_vars=['Area'], var_name='Year', value_name='Cattle_Head')
+df_bydlo['Year'] = df_bydlo['Year'].str.replace('Y', '').astype(int)
+df_bydlo['Cattle_Head'] = pd.to_numeric(df_bydlo['Cattle_Head'], errors='coerce')
+df_bydlo = df_bydlo.groupby(['Area', 'Year'])['Cattle_Head'].sum().reset_index()
 
-# 3. Łączenie w ostateczny plik MVP
-print(" Łączenie tabel...")
-df_merged = pd.merge(df_lasy, df_rolnictwo, on=['Area', 'Year'], how='inner')
-df_final = pd.merge(df_merged, df_bydlo, on=['Area', 'Year'], how='inner')
+# 3. Łączymy wszystko
+print("Łączenie ostatecznej tabeli...")
+m1 = pd.merge(df_lasy, df_rolnictwo, on=['Area', 'Year'], how='inner')
+df_final = pd.merge(m1, df_bydlo, on=['Area', 'Year'], how='inner')
 
-# Zapis do pliku
 df_final.to_csv('mvp_data_global.csv', index=False)
-print(f" SUKCES! Gotowy plik 'mvp_data_global.csv' zawiera {len(df_final)} wierszy.")
+print(f"SUKCES! Nowy, poprawny plik ma {len(df_final)} wierszy.")
