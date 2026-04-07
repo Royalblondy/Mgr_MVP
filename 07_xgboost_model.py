@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 1. Ładowanie danych
-df = pd.read_csv('mvp_features.csv')
+df = pd.read_csv('mvp_features_v2.csv')
 
 train_df = df[df['Year'] <= 2015].copy()
 val_df   = df[(df['Year'] > 2015) & (df['Year'] <= 2019)].copy()
@@ -16,7 +16,12 @@ print(f"Walidacja (2016-2019): {len(val_df)} wierszy")
 print(f"Test (2020+): {len(test_df)} wierszy")
 
 # Definiujemy co model ma widzieć (X) i co ma zgadnąć (y)
-features = ['Agri_Area_Lag1', 'Cattle_Head_Lag1'] # Nasze główne podejrzenia
+features = [
+    'Agri_Area_Lag1',
+    'Cattle_Head_Lag1',
+    'Cattle_Change_Lag1',
+    'Cattle_Density_Lag1'
+]
 target = 'Risk_Class'
 
 X_train = train_df[features]
@@ -29,11 +34,12 @@ print(f"Testy na latach 2020+ (Rekordów: {len(X_test)})")
 
 # 3. TRENOWANIE MODELU XGBOOST
 model = xgb.XGBClassifier(
-    n_estimators=100,
-    max_depth=5,
-    learning_rate=0.1,
-    random_state=42,
-    objective='multi:softprob'
+    n_estimators=200,      # Więcej drzew
+    max_depth=7,           # Głębsze drzewa, żeby wyłapać detale
+    learning_rate=0.05,    # Wolniejsza, ale dokładniejsza nauka
+    subsample=0.8,         # Uczymy się na losowych fragmentach danych (zapobiega overfittingowi)
+    colsample_bytree=0.8,
+    random_state=42
 )
 
 model.fit(X_train, y_train)
