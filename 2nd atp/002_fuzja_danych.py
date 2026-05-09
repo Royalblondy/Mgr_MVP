@@ -2,7 +2,7 @@ import pandas as pd
 
 print("1. Ładowanie danych z Banku Światowego i FAO...")
 df_wb = pd.read_csv('1_dane_bank_swiatowy_czyste.csv')
-df_fao = pd.read_csv('2_dane_fao.csv')
+df_fao = pd.read_csv('2nd atp/2_dane_fao.csv')
 
 print("2. Czyszczenie Banku Światowego z agregatów i makroregionów...")
 # Tworzymy listę słów-kluczy, które zdradzają, że dany wiersz to nie jest prawdziwe państwo
