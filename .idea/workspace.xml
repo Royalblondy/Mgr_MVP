@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c27f603c-75be-4478-bc02-733130cd93e5" name="Changes" comment="shap wstępne na hybrydzie">
+      <change afterPath="$PROJECT_DIR$/.idea/Mgr_MVP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/001_audyt_danych.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/002_fuzja_danych.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/003_raport_kompletnosci.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/004_inzynieria_cech.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/005_statystyki_zbioru.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/006_model_xgboost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/007_generowanie_lstm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/008_hybryda_xgboost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/00_pobierz_wdi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/010_lstm_embeddingi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_dane_bank_swiatowy_czyste.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_dane_bank_swiatowy_nowe.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_dane_fao.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_super_baza_modelowa.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_baza_gotowa_na_ml.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_baza_z_lstm.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_baza_z_lstm_3lata.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/01_data_prep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/02_features.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/03_wizualizacja.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/04_analiza_eda.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/05_europa_analiza.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/06_trendy_procentowe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/07_xgboost_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/08_xgboost_regresja.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/09_stabilizacja_regresji.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/10_prawda_vs_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/11_lstm_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/12_lstm_3years.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/13_lstm_naprawione.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/14_hybryda_lstm_xgboost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/15_hybryda_naprawiona.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/16_shap_wyjasnialnosc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/Crops.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/ForestAll.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/LandUse_Bulk.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/mvp_data_global.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/mvp_features.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/mvp_features_v2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/shap_1_summary.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/shap_2_bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_1_ryzyko.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_2_brazylia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_3_korelacje.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_4_bydlo_vs_las.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_5_ranking_spadku.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_6_polska_las.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_7_europa_porownanie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_8_macierz_pomylek.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_9_prawda_vs_model.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_dynamika_brazil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_dynamika_poland.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstAtp/wykres_dynamika_sweden.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_data_prep.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_features.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_wizualizacja.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_analiza_eda.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_europa_analiza.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_trendy_procentowe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_xgboost_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/08_xgboost_regresja.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/09_stabilizacja_regresji.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10_prawda_vs_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_lstm_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12_lstm_3years.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/13_lstm_naprawione.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/14_hybryda_lstm_xgboost.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/15_hybryda_naprawiona.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/16_shap_wyjasnialnosc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crops.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ForestAll.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LandUse_Bulk.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvp_data_global.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvp_features.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvp_features_v2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shap_1_summary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shap_2_bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_1_ryzyko.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_2_brazylia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_3_korelacje.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_4_bydlo_vs_las.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_5_ranking_spadku.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_6_polska_las.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_7_europa_porownanie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_8_macierz_pomylek.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_9_prawda_vs_model.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_dynamika_brazil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_dynamika_poland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wykres_dynamika_sweden.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3C29Sxix29u4WzYJDBCVrJdQgIH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.001_audyt_danych.executor": "Run",
+    "Python.002_fuzja_danych.executor": "Run",
+    "Python.003_raport_kompletnosci.executor": "Run",
+    "Python.004_inzynieria_cech.executor": "Run",
+    "Python.005_statystyki_zbioru.executor": "Run",
+    "Python.006_model_xgboost.executor": "Run",
+    "Python.007_generowanie_lstm.executor": "Run",
+    "Python.008_hybryda_xgboost.executor": "Run",
+    "Python.00_pobierz_wdi.executor": "Run",
+    "Python.010_lstm_embeddingi.executor": "Run",
+    "Python.01_data_prep.executor": "Run",
+    "Python.02_features.executor": "Run",
+    "Python.03_wizualizacja.executor": "Run",
+    "Python.04_analiza_eda.executor": "Run",
+    "Python.05_europa_analiza.executor": "Run",
+    "Python.06_trendy_procentowe.executor": "Run",
+    "Python.07_xgboost_model.executor": "Run",
+    "Python.08_xgboost_regresja.executor": "Run",
+    "Python.09_stabilizacja_regresji.executor": "Run",
+    "Python.10_prawda_vs_model.executor": "Run",
+    "Python.11_lstm_model.executor": "Run",
+    "Python.12_lstm_3years.executor": "Run",
+    "Python.13_lstm_naprawione.executor": "Run",
+    "Python.14_hybryda_lstm_xgboost.executor": "Run",
+    "Python.15_hybryda_naprawiona.executor": "Run",
+    "Python.16_shap_wyjasnialnosc.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Mgr/Mgr_MVP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Mgr_MVP" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c27f603c-75be-4478-bc02-733130cd93e5" name="Changes" comment="" />
+      <created>1775572800661</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775572800661</updated>
+      <workItem from="1775572801701" duration="1178000" />
+      <workItem from="1775574459165" duration="11477000" />
+      <workItem from="1776779817388" duration="66000" />
+      <workItem from="1778346868259" duration="6637000" />
+    </task>
+    <task id="LOCAL-00001" summary="Przygotowanie MVP danych">
+      <option name="closed" value="true" />
+      <created>1775575912913</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775575912913</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Baza do nauki (klasy ryzyka, % zmiana lasów, opóźnienia)">
+      <option name="closed" value="true" />
+      <created>1775576355533</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775576355533</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Wizualizacja danych i bugfix">
+      <option name="closed" value="true" />
+      <created>1775577860494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775577860494</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Wykresy i statystyka">
+      <option name="closed" value="true" />
+      <created>1775579089692</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775579089692</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bazowy XGBoost">
+      <option name="closed" value="true" />
+      <created>1775582973578</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1775582973578</updated>
+    </task>
+    <task id="LOCAL-00006" summary="XGBoost z ilością bydła 60%">
+      <option name="closed" value="true" />
+      <created>1775584130211</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1775584130211</updated>
+    </task>
+    <task id="LOCAL-00007" summary="XGBoost regresja stabilizacja">
+      <option name="closed" value="true" />
+      <created>1775585329943</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1775585329943</updated>
+    </task>
+    <task id="LOCAL-00008" summary="XGBoost regresja sprawdzanie modelu">
+      <option name="closed" value="true" />
+      <created>1775585927851</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1775585927851</updated>
+    </task>
+    <task id="LOCAL-00009" summary="LSTM bazowy rok w tył">
+      <option name="closed" value="true" />
+      <created>1775586264831</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1775586264831</updated>
+    </task>
+    <task id="LOCAL-00010" summary="LSTM bazowy 3 lata w tył">
+      <option name="closed" value="true" />
+      <created>1775586649947</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1775586649947</updated>
+    </task>
+    <task id="LOCAL-00011" summary="hybryda i lstm naprawiona">
+      <option name="closed" value="true" />
+      <created>1775587222618</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1775587222618</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hybryda naprawiona">
+      <option name="closed" value="true" />
+      <created>1775587487131</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1775587487131</updated>
+    </task>
+    <task id="LOCAL-00013" summary="shap wstępne na hybrydzie">
+      <option name="closed" value="true" />
+      <created>1775587902317</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1775587902317</updated>
+    </task>
+    <task id="LOCAL-00014" summary="shap wstępne na hybrydzie">
+      <option name="closed" value="true" />
+      <created>1775587949989</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1775587949989</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Przygotowanie MVP danych" />
+    <MESSAGE value="Baza do nauki (klasy ryzyka, % zmiana lasów, opóźnienia)" />
+    <MESSAGE value="Wizualizacja danych i bugfix" />
+    <MESSAGE value="Wykresy i statystyka" />
+    <MESSAGE value="bazowy XGBoost" />
+    <MESSAGE value="XGBoost z ilością bydła 60%" />
+    <MESSAGE value="XGBoost regresja stabilizacja" />
+    <MESSAGE value="XGBoost regresja sprawdzanie modelu" />
+    <MESSAGE value="LSTM bazowy rok w tył" />
+    <MESSAGE value="LSTM bazowy 3 lata w tył" />
+    <MESSAGE value="hybryda i lstm naprawiona" />
+    <MESSAGE value="hybryda naprawiona" />
+    <MESSAGE value="shap wstępne na hybrydzie" />
+    <option name="LAST_COMMIT_MESSAGE" value="shap wstępne na hybrydzie" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Mgr_MVP$02_features.coverage" NAME="02_features Coverage Results" MODIFIED="1775583388984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$00_pobierz_wdi.coverage" NAME="00_pobierz_wdi Coverage Results" MODIFIED="1778349811468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$08_xgboost_regresja.coverage" NAME="08_xgboost_regresja Coverage Results" MODIFIED="1775584206929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$01_data_prep.coverage" NAME="01_data_prep Coverage Results" MODIFIED="1775577536044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$09_stabilizacja_regresji.coverage" NAME="09_stabilizacja_regresji Coverage Results" MODIFIED="1775585267536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$001_audyt_danych.coverage" NAME="001_audyt_danych Coverage Results" MODIFIED="1778350023649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$16_shap_wyjasnialnosc.coverage" NAME="16_shap_wyjasnialnosc Coverage Results" MODIFIED="1775587656872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$12_lstm_3years.coverage" NAME="12_lstm_3years Coverage Results" MODIFIED="1775586337674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$07_xgboost_model.coverage" NAME="07_xgboost_model Coverage Results" MODIFIED="1775583398143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$10_prawda_vs_model.coverage" NAME="10_prawda_vs_model Coverage Results" MODIFIED="1775585371169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$11_lstm_model.coverage" NAME="11_lstm_model Coverage Results" MODIFIED="1775586210924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$008_hybryda_xgboost.coverage" NAME="008_hybryda_xgboost Coverage Results" MODIFIED="1778352715665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$15_hybryda_naprawiona.coverage" NAME="15_hybryda_naprawiona Coverage Results" MODIFIED="1775587257697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$04_analiza_eda.coverage" NAME="04_analiza_eda Coverage Results" MODIFIED="1775577935211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$05_europa_analiza.coverage" NAME="05_europa_analiza Coverage Results" MODIFIED="1775578127272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$14_hybryda_lstm_xgboost.coverage" NAME="14_hybryda_lstm_xgboost Coverage Results" MODIFIED="1775586964200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$003_raport_kompletnosci.coverage" NAME="003_raport_kompletnosci Coverage Results" MODIFIED="1778350389298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$010_lstm_embeddingi.coverage" NAME="010_lstm_embeddingi Coverage Results" MODIFIED="1778353042919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$main.coverage" NAME="main Coverage Results" MODIFIED="1775574800908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$test.coverage" NAME="test Coverage Results" MODIFIED="1775576872643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$13_lstm_naprawione.coverage" NAME="13_lstm_naprawione Coverage Results" MODIFIED="1775586676629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$06_trendy_procentowe.coverage" NAME="06_trendy_procentowe Coverage Results" MODIFIED="1775578812059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$005_statystyki_zbioru.coverage" NAME="005_statystyki_zbioru Coverage Results" MODIFIED="1778350779862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$007_generowanie_lstm.coverage" NAME="007_generowanie_lstm Coverage Results" MODIFIED="1778352674887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$002_fuzja_danych.coverage" NAME="002_fuzja_danych Coverage Results" MODIFIED="1778350369447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$03_wizualizacja.coverage" NAME="03_wizualizacja Coverage Results" MODIFIED="1775577583004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$006_model_xgboost.coverage" NAME="006_model_xgboost Coverage Results" MODIFIED="1778351259592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mgr_MVP$004_inzynieria_cech.coverage" NAME="004_inzynieria_cech Coverage Results" MODIFIED="1778350761193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
